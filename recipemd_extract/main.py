@@ -18,7 +18,7 @@ def extract(url, debug=False):
 	except Exception:
 		print('No valid URL', file=sys.stderr)
 		sys.exit(1)
-	soup = BeautifulSoup(page.text, "html5lib")
+	soup = BeautifulSoup(page.text, "lxml")
 
 	pluginFilelist=os.listdir(os.path.dirname(os.path.realpath(__file__))+'/plugins')
 	errors = []
